@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -18,14 +21,15 @@
     --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
     --green: #64ffda;
+    --font-mono: 'Roboto Mono', monospace;
 }
 
 body, html {
     background: var(--dark-navy);
+    font-family: var(--font-mono);
 }
 
 #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;

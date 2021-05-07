@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <Loading v-if="getIsLoading"/>
+      <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
@@ -8,6 +9,20 @@
   </div>
 </template>
 
+<script>
+import Loading from '@/components/Loading'
+import { mapGetters } from 'vuex'
+export default {
+  components: {
+    Loading
+  },
+  computed: {
+    ...mapGetters(['getIsLoading'])
+  }
+  
+  
+}
+</script>
 <style lang="scss">
 @import '@/assets/scss/base.scss';
 

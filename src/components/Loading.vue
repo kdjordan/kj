@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { gsap } from 'gsap';
+import { gsap, TweenMax } from 'gsap';
 export default {
     data() {
         return {
@@ -23,6 +23,7 @@ export default {
     methods: {
         runAnimation() {
             gsap.set('.leg1, .leg2, .k1, .k2', {opacity: 0})
+            // TweenMax.staggerTo('.leg1',1, {opacity:0.3})
             let tl = gsap.timeline()
             tl.to('.leg1', {opacity: 1, duration: .5})
             tl.to('.leg2', {opacity: 1, duration: .5})

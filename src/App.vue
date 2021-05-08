@@ -1,20 +1,19 @@
 <template>
   <div id="app">
     <Loading v-if="getIsLoading"/>
-      <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+      <Header />
     <router-view/>
   </div>
 </template>
 
 <script>
 import Loading from '@/components/Loading'
+import Header from '@/components/Header'
 import { mapGetters } from 'vuex'
 export default {
   components: {
-    Loading
+    Loading,
+    Header
   },
   computed: {
     ...mapGetters(['getIsLoading'])

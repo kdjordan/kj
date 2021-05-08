@@ -29,6 +29,10 @@ body, html {
     font-family: var(--font-mono);
 }
 
+a {
+    text-decoration: none;
+    color: var(--slate);
+}
 #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

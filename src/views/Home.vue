@@ -1,36 +1,26 @@
 <template>
   <div class="home">
-    <div>
-      <h1></h1>
-    </div>
+    <Hero />
+    <About />
   </div>
 </template>
 
 <script>
-import { gsap } from "gsap";
-
+import Hero from '@/components/Hero'
+import About from '@/components/About'
 export default {
-    methods: {
-        runAnimation() {
-            setTimeout(()=> {
-                gsap.registerPlugin(TextPlugin);
-                gsap.to("h1", {text:"Kevin Jordan", ease:"power1.in", duration:2})
-
-            }, 2500)
-
-        }
-    },
-mounted() {
-    this.runAnimation()
-}
+  components: {
+    Hero,
+    About
+  }
 }
 </script>
 
 <style scoped lang="scss">
-.home {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
+// .home {
+//   display: flex;
+//   height: 100vh;
+//   justify-content: center;
+//   align-items: center;
+// }
 </style>

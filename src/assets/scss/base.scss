@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 *,
 *::before,
@@ -16,12 +17,14 @@
     --lightest-navy: #233554;
     --navy-shadow: rgba(2,12,27,0.7);
     --dark-slate: #495670;
-    --slate: #8892b0;
-    --light-slate: #a8b2d1;
+    --slate: #D0C5D0;
     --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
-    --green: #64ffda;
+    --green: #16FE28;
     --font-mono: 'Roboto Mono', monospace;
+    --font-russo: 'Russo One', sans-serif;
+    --lrg: 4rem;
+    --med: 2.5rem;
 }
 
 body, html {
@@ -29,10 +32,32 @@ body, html {
     font-family: var(--font-mono);
 }
 
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-russo);
+  letter-spacing: 3px;
+}
+
 a {
     text-decoration: none;
     color: var(--slate);
 }
+
+img {
+  line-height: 0;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  // border: 1px solid green;
+}
+
 #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

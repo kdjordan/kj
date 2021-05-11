@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { gsap, TweenMax } from 'gsap';
+import { gsap } from 'gsap';
 export default {
     data() {
         return {
@@ -23,7 +23,6 @@ export default {
     methods: {
         runAnimation() {
             gsap.set('.leg1, .leg2, .k1, .k2', {opacity: 0})
-            // TweenMax.staggerTo('.leg1',1, {opacity:0.3})
             let tl = gsap.timeline()
             tl.to('.leg1', {opacity: 1, duration: .5})
             tl.to('.leg2', {opacity: 1, duration: .5})
@@ -31,7 +30,9 @@ export default {
             tl.to('.k1', {opacity: 1, duration: .5})
             tl.to('.leg1, .leg2, .k1, .k2', {opacity: 0})
             tl.to('.loading', {width: 0})
-            this.$store.commit('setIsLoading')
+            setTimeout(()=> {
+                this.$store.commit('setIsLoading')
+            }, 3000)
         }
     },
     mounted() {

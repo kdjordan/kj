@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <Loading v-if="getIsLoading"/>
+    <div v-else>
       <Header />
-    <router-view/>
+      <router-view/>
+    </div>
   </div>
 </template>
 
